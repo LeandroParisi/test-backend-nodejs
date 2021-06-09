@@ -37,3 +37,4 @@ A basic crud for a store
 
 - [ ] Implement category and name searches as query params
 - [ ] Make updates dinamic, so that user could update as many fields as he wanted, not beeing necessary to update all at once
+- [ ] Have test coverage for at least 80% of the project
