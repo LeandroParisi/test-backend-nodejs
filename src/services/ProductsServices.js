@@ -4,7 +4,7 @@ const {status, errorMessages} = require('../errorHandler/utils/status');
 
 const registerProduct = async ({name, quantity, description, price, category}) => {
 
-  const product = await models.findByName(name);
+  const product = await models.getByName(name);
 
   if (product) {
     throw new throwError(status.unprocessableEntity, errorMessages.productExists);
@@ -51,8 +51,8 @@ const getAll = async () => {
   return responsePayload;
 };
 
-const findById = async (id) => {
-  const product = await models.findById(id);
+const getById = async (id) => {
+  const product = await models.getById(id);
 
   return product;
 };
@@ -81,7 +81,7 @@ const deleteProduct = async (id) => {
 module.exports = {
   registerProduct,
   getAll,
-  findById,
+  getById,
   updateProduct,
   deleteProduct,
   getByCategory,

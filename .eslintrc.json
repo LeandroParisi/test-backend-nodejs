@@ -30,7 +30,7 @@
         "ignoreUrls": true
       }
     ],
-    "max-params": ["error", 4],
+    "max-params": ["error", 6],
     "max-lines": ["error", 250],
     "max-lines-per-function": ["error", 150],
     "complexity": ["error", 15],
