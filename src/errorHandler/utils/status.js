@@ -22,9 +22,9 @@ const errorMessages = {
   productExists: 'Product already exists',
   wrongId: 'Wrong id format',
   wrongIdOrQuantity: 'Wrong product ID or invalid quantity',
-  missingDescription: 'Filed "description" is required',
-  missingPrice: 'Filed "price" is required',
-  missingCategory: 'Filed "category" is required',
+  missingDescription: 'Field "description" is required',
+  missingPrice: 'Field "price" is required',
+  missingCategory: 'Field "category" is required',
 
 };
 

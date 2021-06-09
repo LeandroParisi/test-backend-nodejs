@@ -7,7 +7,7 @@ const validateRegisterProduct = rescue((req, _res, next) => {
   const {name, quantity, description, price, category} = req.body;
 
   const minLength = 5;
-  const minValue = 0;
+  const minQuantity = 0;
 
   if(!validate.nameValidation(name, minLength)) {
     throw new throwError(status.unprocessableEntity, errorMessages.smallName);
@@ -17,7 +17,7 @@ const validateRegisterProduct = rescue((req, _res, next) => {
     throw new throwError(status.unprocessableEntity, errorMessages.quantityAsNumber);
   }
 
-  if(!validate.quantityValidation(quantity, minValue)) {
+  if(!validate.quantityValidation(quantity, minQuantity)) {
     throw new throwError(status.unprocessableEntity, errorMessages.lowQuantity);
   }
 
