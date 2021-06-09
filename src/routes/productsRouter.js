@@ -9,6 +9,10 @@ ProductsRouter.get('/', ProductController.getAll);
 
 ProductsRouter.get('/:id', ProductController.getById);
 
+ProductsRouter.get('/category', ProductController.getByCategory);
+
+ProductsRouter.get('/name', ProductController.getByName);
+
 ProductsRouter.put('/:id', ProductController.updateProducts);
 
 ProductsRouter.delete('/:id', ProductController.deleteProduct);
