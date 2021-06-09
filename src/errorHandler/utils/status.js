@@ -22,8 +22,10 @@ const errorMessages = {
   productExists: 'Product already exists',
   wrongId: 'Wrong id format',
   wrongIdOrQuantity: 'Wrong product ID or invalid quantity',
-  saleNotFound: 'Sale not found',
-  wrongSaleID: 'Wrong sale ID format'
+  missingDescription: 'Filed "description" is required',
+  missingPrice: 'Filed "price" is required',
+  missingCategory: 'Filed "category" is required',
+
 };
 
 module.exports = {status, codeTranslator, errorMessages};
