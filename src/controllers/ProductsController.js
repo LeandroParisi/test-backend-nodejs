@@ -31,7 +31,7 @@ const getAll = async (req, res) => {
 const getById = rescue(async (req, res) => {
   const {id} = req.params;
 
-  const responsePayload = await ProductsServices.findById(id);
+  const responsePayload = await ProductsServices.getById(id);
 
   res.status(status.ok).json(responsePayload);
 });
@@ -48,7 +48,7 @@ const updateProducts = async (req, res) => {
 const deleteProduct = rescue(async (req, res) => {
   const { id } = req.params;
 
-  const hasProduct = await ProductsServices.findById(id);
+  const hasProduct = await ProductsServices.getById(id);
 
   if(!hasProduct) throw new throwError(status.unprocessableEntity, errorMessages.wrongId);
 
@@ -58,6 +58,7 @@ const deleteProduct = rescue(async (req, res) => {
 
   const responsePayload = {
     _id: id,
+    message: 'Product deleted successfully',
     name,
   };
 

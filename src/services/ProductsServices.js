@@ -57,8 +57,8 @@ const getById = async (id) => {
   return product;
 };
 
-const updateProduct = async ({name, quantity, description, price, category}) => {
-  await models.updateProduct(name, quantity, description, price, category);
+const updateProduct = async ({name, quantity, description, price, category}, id) => {
+  await models.updateProduct(name, quantity, description, price, category, id);
 
   const updatedProduct = {
     _id: id,
