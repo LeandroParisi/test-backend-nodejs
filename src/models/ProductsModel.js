@@ -18,7 +18,8 @@ const getByCategory = async (category) => {
   const products = await connection().then((db) =>
     db
       .collection(dbCollection)
-      .find({category})  
+      .find({category})
+      .toArray()  
   );
 
   return products;
